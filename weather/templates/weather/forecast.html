@@ -1,20 +1,51 @@
-{% load static %}
-
+{% load static %} 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Forecast</title>
-	
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
-</head>
-<body>
-	<!-- your single-location forecast interface here -->
-</body>
+  <head>
+    <title>Forecast</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+    <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">
+<!--       <script>
+      function sample() {
+        window.alert("警告ダイアログの使用例です。\n［OK］ボタンのみで［キャンセル］ボタンはありません。");
+      }
+      </script> -->
+  </head>
+  <body>
+    <!-- your single-location forecast interface here -->
+    <header>
+      <row>
+        <div class="form">
+          <form id="form4">
+          <input id="sbox4" id="s" name="s" type="text" value="San Raphael" />
+          <button id="sbtn4" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+<!--           <a href="#" onclick="sample()">警告ダイアログを表示します</a> -->
+        </div>
+      </row>
+    </header>
+    <main>
+      
+      <div class="weather w-data">
+        <img style="width:50vw" src="/static/weather/assets/weather.png">
+      </div>
+      
+      <div class="temperature w-data">
+        <img src="/static/weather/assets/tmp.png">
+      </div>
+      
+      <div class="rainfall w-data">
+        <img src="/static/weather/assets/rainfall.png">
+        
+      </div>
+      
+      <div class="wind w-data">
+        <img src="/static/weather/assets/wind.png">
+      </div>
+      <div class="tools">
+        <a href="https://www.google.com/maps/dir/University+of+California,+Berkeley,+Berkeley,+CA/%E3%82%AB%E3%83%AA%E3%83%95%E3%82%A9%E3%83%AB%E3%83%8B%E3%82%A2%E5%B7%9E+%E3%82%B5%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%95%E3%82%A1%E3%82%A8%E3%83%AB/@37.8969912,-122.4502914,12z/data=!4m14!4m13!1m5!1m1!1s0x808f7718c522d7c1:0xda8034ea3b6b3289!2m2!1d-122.2585399!2d37.8718992!1m5!1m1!1s0x8085976736097a2f:0xbe014d20e6e22654!2m2!1d-122.5310874!2d37.9735346!3e3?hl=ja"><img src="/static/weather/assets/map.png"></a>
+      </div>
+    </main>
+  </body>
 </html>
-
-
-
-
-

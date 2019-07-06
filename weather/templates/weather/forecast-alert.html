@@ -1,20 +1,48 @@
-{% load static %}
-
+{% load static %} 
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Forecast - Alert!</title>
-	
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
-</head>
-<body>
-	<!-- your single-location forecast with alert interface here -->
-</body>
+  <head>
+    <title>Forecast</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+    <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- your single-location forecast interface here -->
+    <header>
+      <row>
+        <div class="form">
+          <form id="form4">
+          <input id="sbox4"  id="s" name="s" type="text" placeholder="San Raphael" />
+          <button id="sbtn4" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </row>
+    </header>
+    <main>
+      <div class="alart">
+<!--         <img src=""> -->
+      </div>
+      
+      <div class="weather w-data">
+        <img style="width:50vw" src="/static/weather/assets/weather.png">
+      </div>
+      
+      <div class="temperature w-data">
+        <img src="/static/weather/assets/tmp.png">
+      </div>
+      
+      <div class="rainfall w-data">
+        <img src="/static/weather/assets/rainfall.png">
+        
+      </div>
+      
+      <div class="wind w-data">
+        <img src="/static/weather/assets/wind.png">
+      </div>
+    
+    
+    </main>
+  </body>
 </html>
-
-
-
-
 

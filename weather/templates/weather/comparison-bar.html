@@ -1,0 +1,29 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forecast</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+  </head>
+  <body>
+    <!-- your single-location forecast interface here -->
+    <main>
+      <div class="row">
+          <iframe class="map" src="https://maps.google.co.jp/maps?output=embed&q=UC Berkeley" width="980px" height="1700px"></iframe>
+      </div>
+      <div class="timerange">
+        <input type="range" class="input-range" value="100" min="0" max="200" data-unit="%">
+        <img src="/static/weather/assets/weather/assets/clock.png" style="float:left; width:100px">
+      </div>
+      <div class="tools">
+        <a href="/weather/comparison-bar.html">        
+          <img class="layer"  src="/static/weather/assets/layer.jpeg"></a>
+        <img class="glass" src="/static/weather/assets/glass.png">
+        <img src="/static/weather/assets/map.png">
+      </div>
+      <img class="sunny data" src="/static/weather/assets/weatherapp.gif">
+      <img class="storm data" src="/static/weather/assets/storm.png">
+    </main>
+  </body>
+</html>
